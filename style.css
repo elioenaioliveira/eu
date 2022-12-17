@@ -1,0 +1,199 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+:root{
+    /*Palleta de cores*/
+    --cor1:#BAB91A;
+    --cor2:#878756;
+    --cor3:#EDC839;
+    --cor4:#759EEF;
+    --cor5:#1A79BA;
+    /*fonts*/
+    --fontAlerta: 'Allerta Stencil', sans-serif;
+    --fontAlumni: 'Alumni Sans Inline One', cursive;
+    --fontAssinar:'Passions Conflict', cursive;;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor5);
+}
+
+header{
+    background-color: var(--cor3);
+    border-radius: 10px;
+}
+
+header > h1 {
+    font-family: var(--fontAlumni);
+    font-weight: normal;
+    font-size: 55px;
+    border: 10px 10px 1 0px 10px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    border-radius: 10px;
+}
+header > nav > a > button {
+    text-align: center;
+    text-decoration: none;
+    font: normal lighter 0.8em var(--fontAlerta);
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    border-radius: 10px;
+    height: 68px;
+    padding: 2%;
+}
+nav > a > button {
+    background-color: var(--cor3);
+    border-radius: 5px;
+    padding-left: 2px;
+    block-size: 55px;
+    width: 24%;
+}
+nav > a > button:hover {
+    background-color: white;
+}
+
+div.elioenai{
+    width: 87.8%;
+    height: 100%;
+    background-color: lightblue;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid black; 
+}
+
+main div p {
+    font-size: 1.5em;
+}
+p#assinaturaeli {
+    font-family: 'Passions Conflict', cursive;
+    font-size: 4em;
+    font-weight: 600px;
+    margin: 0px 15px 0px 0px;
+    padding: 0px;
+}
+picture#teste{
+    margin: 0px 0px 0px 0px;
+    width: 87.8%;
+}
+
+main > a > input{
+    height: 100px;
+    width: 43%;
+    font: normal bolder 20px --fontAlerta;
+    margin-left: 5%;
+    text-size-adjust: initial;
+    
+}
+
+main > a {
+    height: 120px;
+    width: 50%;
+    font: normal bold 24px --fontAlerta;
+}
+
+main > p {
+
+    font: italic normal 24px --fontAlerta;
+    margin: auto;
+}
+
+main {
+    margin: auto;
+    width: 97%;
+    background-color: var(--cor4);
+    border-radius: 20px;
+    position: inherit;
+    padding: 2%;
+}
+
+main > h1 {
+    background-image: linear-gradient(to left, rgb(109, 180, 109), rgb(184, 220, 184));
+    border-radius: 10px 10px 0px 0px;
+}
+
+a > div.botones {
+    background-color: var(--cor1);
+    width: 40%;
+    height: 70px;
+    margin: 5%;
+    display: inline-block;
+    padding: 0%;
+    border-radius: 10px;
+}
+
+a > div.botones:hover {
+    background-color: var(--cor3);
+}
+
+a > div.botones > p {
+    font: normal normal 1em var(--fontAlumni);
+    text-align: center;
+    margin: 0px;
+    margin-top: 8px;
+    padding: 0px;
+    max-width: 99%
+}
+
+ul > li {
+    font: normal normal 1.5em sans-serif;
+}
+ul > li.ola {
+    font: normal bolder 1.5em sans-serif;
+}
+
+input#email{
+    width: 55%;
+    height: 30px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.676);
+    display: inline-block;
+    margin-left: 20px;
+}
+input#fone{
+    width: 55%;
+    height: 30px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.676);
+    display: inline-block;
+    margin-left: 1%;
+}
+
+main > div.elioenai > h1 {  
+    background-image: linear-gradient(to left, rgb(109, 180, 109), rgb(184, 220, 184));
+    border-radius: 10px 10px 0px 0px;
+}
+
+input#text {
+    display: inline-block;
+    background-color: var(--cor5);
+    border: 0px solid var(--cor5);
+    font: normal normal 0.001em sans-serif;
+    color: var(--cor5);
+    position: fixed;
+}
+
+button#copy{
+    margin: 0.2%;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+button#copy:hover{
+    background-color: lightblue;
+}
+
+ul > li > a::after {
+   content: '\00a0' '🔗';
+}
+iframe {
+    margin: auto;
+}

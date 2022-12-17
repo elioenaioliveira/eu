@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elioenai Oliveira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="color: black;">Elioenai Oliveira</a></h1>
+        <nav>
+            <a href="quemsoueu.html"><button>Quem sou eu?</button></a>
+            <a href="pesquisas.html"><button>Acesse as Pesquisas</button></a>
+            <a href="#"><button style="background-color:var(--cor4);"> Projetos em andamento</button></a>
+            <a href="doacao.html"><button>Colabore</button></a>          
+        </nav>
+    </header>
+    <main>
+
+        <div class="corte" style="padding: 2%">
+            <h1>Projetos Sociais</h1>
+            <p>
+                Trabalhando com projetos sociais voltados a aula de música: <br><br>
+                -Projeto Vida <br>
+                -Projeto Alfa <br>
+            </p>
+
+            <h1>Projetos Ambientais</h1>
+            <p>
+                Trabalhando para o Meio-Ambiente: <br><br>
+                -Desclora H20 <br>
+                -VidaO2 <br>
+            </p>
+
+            <h2>Para conhecer melhor o projeto entre em contato conosco:</h2>
+            <p>(19) 9 8870-5673</p>
+
+            <h2>Se preferir, envie-nos seu telefone / e-mail e entraremos em contato:</h2>
+        </div>
+        <p id="psaida"></p>
+        <form name="google-sheet1" style="padding: 2%">
+            
+            <p style="display: inline-block; font:normal bolder 1.5em sans-serif">Nome:</p><input type="text" name="name" id="email" data-js="email"><br><br>
+
+            <p style="display: inline-block; font:normal bolder 1.5em sans-serif">E-mail:</p><input type="email" name="email" id="email" data-js="email"><br><br>
+
+            <p style="display: inline-block; font:normal bolder 1.5em sans-serif">Telefone:</p><input type="tel" name="tel" id="fone" data-js="telefone"><br><br>
+
+            <input type="submit" id="submBot" value="Enviar seus dados" style="margin-left: 25%; width: 50%; height: 80px; font: normal bolder 1.2em sans-serif;">
+        </form>
+
+        <script>
+            var diva = document.getElementById("psaida")
+            const botao = document.getElementById("submBot")
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby0MSsBHdvrl2VL73SwdSk6sG6NArAjQQNvIebiG0m7tbz4aRv147s_m-hV4hNqPFLh/exec'
+
+            const form = document.forms['google-sheet1']
+
+            form.addEventListener('submit', e=>{
+                e.preventDefault()
+                fetch(scriptURL,{method: 'POST', body: new FormData(form)})
+                    .then(
+                        diva.innerHTML = 'Dados enviados'
+                    )
+                    .catch(
+                        botao.style.background = 'green'
+                    )
+            })
+        </script>
+    </main>
+</body>
+</html>

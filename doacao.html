@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doação ao projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="color: black;">Elioenai Oliveira</a></h1>
+        <nav>
+            <a href="quemsoueu.html"><button>Quem sou eu?</button></a>
+            <a href="pesquisas.html"><button>Acesse as Pesquisas</button></a>
+            <a href="projetosemandamento.html"><button>Projetos em andamento</button></a>
+            <a href="#"><button style="background-color: var(--cor4);">Colabore</button></a>          
+        </nav>
+    </header>
+    <main style="padding: 2%;">
+        <h1>Nossos bancos: (chaves-PIX)</h1>
+        <ul>
+            <li><strong>NUBANK:</strong> <br> eligabrielhenri@gmail.com
+                <br><br>
+            <li><strong>CAIXA ECONÔMICA FEDERAL:</strong>
+                <br>EM BREVE!<br><br>
+            </li>
+
+            <li><strong>ITAÚ:</strong>
+                <br>Apenas depósito Bancário. Entrar em contato pelo telefone: <strong>19988705673</strong>.<br><br>
+            </li>
+            <li><strong>PIC PAY:</strong>
+                <br>86e5a592-208d-458a-a36f-51ae50c71f7d   <button id="copy">Copiar</button>
+            </li>
+        </ul> <br>
+        <p>
+            Gratidão é o que nos move! Obrigado, por nos ajudar!
+        </p><br>
+        <p id="assinaturaeli">Elioenai Oliveira</p>
+    </main>
+    
+    <input type="text" name="" id="text" value="86e5a592-208d-458a-a36f-51ae50c71f7d" style="display: hidden;" >
+  
+    <script>
+      const textInput = document.getElementById('text');
+      const copyButton = document.getElementById('copy');
+  
+      copyButton.addEventListener('click', ()=> {
+        textInput.select();
+        document.execCommand('copy');
+        copyButton.innerHTML = `Copiado!`
+        copyButton.style.background = 'green'
+      });
+    </script>
+
+    <footer>
+        
+    </footer>
+
+</body>
+</html>

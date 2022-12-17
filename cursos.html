@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="color: black;">
+                Elioenai Oliveira
+            </a>
+            <br>
+            ÁREA DE MÚSICA: Cursos com certificado! 🎵
+        </h1>
+        <nav>
+            <a href="quemsoueu.html"><button>Quem sou eu?</button></a>
+            <a href="pesquisas.html"><button>Acesse as Pesquisas</button></a>
+            <a href="projetosemandamento.html"><button>Projetos em andamento</button></a>
+            <a href="doacao.html"><button>Colabore</button></a>          
+        </nav>
+        <div>
+            <h1>Seja bem-vindo a sua área de cursos!</h1>
+            <h2>Antes de continuarmos será necessário coletarmos alguns dados!</h2>
+            <p><strong>Atenção!</strong> seus dados são protegidos pela tecnologia do GOOGLE, e serão utilizados de maneira muito segura!</p>
+        </div>
+        <form name="google-sheet1" autocomplete="off">
+            <label for="name">Nome Completo:</label><input type="text" name="name">
+            <p>Atenção: esse nome é o que aparecerá em seu certificado. Preencha-o corretamente!</p>
+            <label for="rg">Registro Geral (R.G.):</label><input type="number" name="rg" id="rg"><br><br>
+            <label for="cpf">Cadastro de Pessoa Física (C.P.F.):</label><input type="number" name="cpf" id="cpf"><br><br>
+            <label for="dn">Data de Nascimento</label><input type="date" name="dn" id="dn"><br><br>
+            <label for="tel">Celular:</label><input type="tel" name="tel" id="tel"><br><br>
+            <input type="submit" id="submBot" value="Enviar">
+            <input type="reset" value="Limpar dados">
+            <p id="psaida"></p>
+        </form>
+        <script>
+            var diva = document.getElementById("psaida")
+            const botao = document.getElementById("submBot")
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby0MSsBHdvrl2VL73SwdSk6sG6NArAjQQNvIebiG0m7tbz4aRv147s_m-hV4hNqPFLh/exec'
+
+            const form = document.forms['google-sheet1']
+
+            form.addEventListener('submit', e=>{
+                e.preventDefault()
+                fetch(scriptURL,{method: 'POST', body: new FormData(form)})
+                window.alert('dados enviados!')
+                diva.innerHTML = `Você pode acessar a página: <a href="cursoss.html">clicando aqui</a>`
+            })
+        </script>
+</body>
+</html>
